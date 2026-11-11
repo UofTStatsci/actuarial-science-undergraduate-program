@@ -832,9 +832,10 @@
     }
 
     // Mouse, pen and touch interaction.
-    d3.select(canvas)
-      .on("touchmove", event => event.preventDefault())
-      .on("pointermove", pointermoved);
+   d3.select(canvas)
+  .on("touchmove", event => event.preventDefault())
+  .on("pointermove", pointermoved)
+  .on("pointerleave", pointerleft);
 
     window.addEventListener(
       "resize",
