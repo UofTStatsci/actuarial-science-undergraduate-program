@@ -1,7 +1,7 @@
 
 /* ==========================================================
    U OF T STATISTICAL SCIENCES
-   UNDERGRADUATE PROGRAMS
+   ACTUARIAL SCIENCE UNDERGRADUATE PROGRAMS
    MAIN STYLESHEET
    ========================================================== */
 
@@ -12,7 +12,8 @@
 
 :root {
   --blue: #0180a5;
-  --undergrad-blue: #002a5c;
+  --undergrad-blue: #71C988;
+  --actuarial-green: #71C988;
   --navy: #08264b;
   --globe-bg: #071b33;
   --globe-land: #d9e8ed;
@@ -108,7 +109,7 @@ body {
   letter-spacing: 0.08em;
 }
 
-/* Hamburger button: hidden on desktop */
+/* Hamburger: hidden on desktop */
 
 .nav-toggle {
   display: none;
@@ -147,14 +148,17 @@ body {
 
 .eyebrow {
   margin-bottom: 2rem;
+
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
+
   opacity: 0.72;
 }
 
 .panel h2 {
   margin: 0;
+
   font-size: clamp(3rem, 7vw, 7rem);
   line-height: 0.9;
   letter-spacing: -0.055em;
@@ -162,13 +166,14 @@ body {
 
 .lede {
   max-width: 650px;
+
   font-size: clamp(1.1rem, 1.7vw, 1.55rem);
   line-height: 1.55;
 }
 
 
 /* ==========================================================
-   6. COVER
+   6. COVER / HOMEPAGE
    ========================================================== */
 
 .cover {
@@ -178,8 +183,10 @@ body {
 
   padding: 5vh 5vw;
 
-  background: var(--undergrad-blue);
+  background: var(--actuarial-green);
 }
+
+/* Collision animation canvas */
 
 .cover canvas {
   position: absolute;
@@ -193,6 +200,8 @@ body {
   touch-action: none;
 }
 
+/* Maintain foreground positioning */
+
 .cover-top,
 .cover-bottom,
 .down {
@@ -200,7 +209,9 @@ body {
   z-index: 2;
 }
 
-/* Official reverse-white SVG logo */
+/* ----------------------------------------------------------
+   Statistical Sciences department logo
+   ---------------------------------------------------------- */
 
 .cover-top {
   width: fit-content;
@@ -223,7 +234,9 @@ body {
   pointer-events: none;
 }
 
-/* Undergraduate program title */
+/* ----------------------------------------------------------
+   Actuarial Science heading
+   ---------------------------------------------------------- */
 
 .cover-bottom {
   width: min(560px, 80vw);
@@ -231,6 +244,22 @@ body {
 
   border-top: 1px solid rgba(255, 255, 255, 0.75);
 }
+
+.cover-title {
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 0 0 1.5rem;
+
+  color: var(--white);
+
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.85;
+  letter-spacing: -0.055em;
+  font-weight: 700;
+}
+
+/* Undergraduate program label */
 
 .cover-bottom p {
   width: fit-content;
@@ -242,11 +271,14 @@ body {
   font-weight: 700;
 }
 
-.cover-bottom div {
+/* Specialist / Major subtitle */
+
+.cover-subtitle {
   width: fit-content;
   max-width: 100%;
 
   font-size: 1.15rem;
+  line-height: 1.5;
 }
 
 .cover-bottom span {
@@ -288,7 +320,7 @@ body {
 }
 
 .cards b {
-  color: var(--blue);
+  color: var(--actuarial-green);
   font-size: 3rem;
 }
 
@@ -321,7 +353,7 @@ body {
 }
 
 .program.alt {
-  background: var(--blue);
+  background: var(--actuarial-green);
   color: var(--white);
 }
 
@@ -356,7 +388,7 @@ body {
 
 
 /* ==========================================================
-   9. WHY STUDY STATISTICS / METRICS
+   9. ACADEMIC DISTINCTION / METRICS
    ========================================================== */
 
 .metrics {
@@ -373,12 +405,14 @@ body {
 
 .metric-grid div {
   padding: 1.5rem 1rem 2.5rem 0;
+
   border-top: 1px solid #555555;
 }
 
 .metric-grid strong {
   display: block;
-  color: var(--blue);
+
+  color: var(--actuarial-green);
 
   font-size: clamp(2.5rem, 5vw, 5rem);
   letter-spacing: -0.05em;
@@ -392,6 +426,7 @@ body {
   position: absolute;
   right: 7vw;
   bottom: 4vh;
+
   color: #aaaaaa;
 }
 
@@ -430,7 +465,9 @@ body {
 
 .globe-copy p {
   max-width: 480px;
+
   color: rgba(255, 255, 255, 0.78);
+
   line-height: 1.55;
 }
 
@@ -449,11 +486,13 @@ body {
 .globe-stats div {
   display: flex;
   flex-direction: column;
+
   min-width: 0;
 }
 
 .globe-stats strong {
   color: var(--white);
+
   font-size: clamp(2rem, 3vw, 4rem);
   line-height: 1;
   letter-spacing: -0.04em;
@@ -461,9 +500,11 @@ body {
 
 .globe-stats span {
   margin-top: 0.5rem;
+
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+
   opacity: 0.6;
 }
 
@@ -490,14 +531,16 @@ body {
 
 #globe-canvas {
   display: block;
+
   width: 100%;
   height: 100%;
+
   touch-action: none;
 }
 
 
 /* ==========================================================
-   11. CAREERS AND EXPERIENCE
+   11. PROFESSIONAL EXPERIENCE
    ========================================================== */
 
 .research {
@@ -517,7 +560,7 @@ body {
 }
 
 .columns h3 {
-  color: var(--blue);
+  color: var(--actuarial-green);
 }
 
 .columns p {
@@ -544,93 +587,35 @@ body {
   text-underline-offset: 4px;
 }
 
-.eyebrow a {
-  color: inherit;
-}
-
-.research .columns ul,
-.city-box ul {
-  padding-left: 1.2rem;
-  line-height: 1.7;
-}
-
 
 /* ==========================================================
-   12. UNDERGRADUATE RESEARCH
-   ========================================================== */
-
-
-/* ==========================================================
-   UNDERGRADUATE RESEARCH
+   12. PROFESSIONAL RECOGNITION / CREDENTIALS
    ========================================================== */
 
 .city {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: stretch;
+  display: flex;
+  align-items: center;
 
-  padding: 0;
-
-  background: linear-gradient(
-    90deg,
-    var(--blue) 0%,
-    var(--blue) 50%,
-    var(--black) 50%,
-    var(--black) 100%
-  );
+  background:
+    linear-gradient(
+      120deg,
+      var(--actuarial-green) 0 55%,
+      var(--black) 55%
+    );
 }
 
 .city-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
   max-width: 720px;
-  padding: 10vh 7vw;
 }
 
 .city-box p {
-  font-size: 1.15rem;
-  line-height: 1.65;
+  font-size: 1.35rem;
+  line-height: 1.55;
 }
 
-.research-image {
-  position: relative;
-  min-width: 0;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.research-image img {
-  position: absolute;
-  inset: 0;
-
-  display: block;
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: center;
-}
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-  .city {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 40vh;
-    background: var(--blue);
-  }
-
-  .city-box {
-    padding: 10vh 7vw 7vh;
-  }
-
-  .research-image {
-    min-height: 40vh;
-  }
-
+.city-box ul {
+  padding-left: 1.2rem;
+  line-height: 1.7;
 }
 
 
@@ -644,7 +629,7 @@ body {
   align-items: center;
   gap: 8vw;
 
-  background: var(--blue);
+  background: var(--actuarial-green);
 }
 
 .apply-copy {
@@ -655,6 +640,12 @@ body {
 .apply-copy li {
   margin-bottom: 1rem;
 }
+
+.apply-copy a:not(.button) {
+  color: inherit;
+}
+
+/* Admission buttons */
 
 .button {
   display: inline-block;
@@ -707,7 +698,7 @@ body {
   min-height: 100vh;
   padding: 0;
 
-  background: var(--undergrad-blue);
+  background: var(--actuarial-green);
   color: var(--white);
 
   overflow: hidden;
@@ -764,7 +755,7 @@ body {
   opacity: 0.65;
 }
 
-/* Photograph */
+/* Final-page building photograph */
 
 .footer-image {
   position: relative;
@@ -787,13 +778,12 @@ body {
   object-fit: cover;
   object-position: right center;
 
-  /* Avoid unwanted image stretching */
   max-width: none;
 }
 
 
 /* ==========================================================
-   15. MOBILE AND TABLET
+   15. MOBILE AND TABLET NAVIGATION
    Breakpoint: 800px
    ========================================================== */
 
@@ -830,7 +820,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 4px;
 
-    background: var(--undergrad-blue);
+    background: var(--actuarial-green);
     cursor: pointer;
 
     -webkit-tap-highlight-color: transparent;
@@ -864,13 +854,13 @@ body {
     transform: translateY(-8px) rotate(-45deg);
   }
 
-  /* Closed state: hide all text navigation */
+  /* Closed state */
 
   .nav nav.nav-menu {
     display: none;
   }
 
-  /* Open state: show dropdown */
+  /* Open dropdown */
 
   .nav nav.nav-menu.is-open {
     display: flex;
@@ -886,15 +876,13 @@ body {
     width: min(260px, 90vw);
     padding: 10px 0;
 
-    background: rgba(0, 30, 65, 0.98);
+    background: rgba(0, 35, 25, 0.98);
 
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
 
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
   }
-
-  /* Dropdown links */
 
   .nav nav.nav-menu a {
     display: block;
@@ -913,7 +901,10 @@ body {
     background: rgba(255, 255, 255, 0.12);
   }
 
-  /* General panel layouts */
+
+  /* --------------------------------------------------------
+     General panel layouts
+     -------------------------------------------------------- */
 
   .panel {
     padding: 12vh 7vw 7vh;
@@ -927,7 +918,10 @@ body {
     grid-template-columns: 1fr;
   }
 
-  /* Cover */
+
+  /* --------------------------------------------------------
+     Cover
+     -------------------------------------------------------- */
 
   .cover {
     padding: 5vh 5vw;
@@ -938,7 +932,18 @@ body {
     max-height: 90px;
   }
 
-  /* Programs */
+  .cover-title {
+    font-size: clamp(2.8rem, 11vw, 5rem);
+  }
+
+  .cover-bottom {
+    width: min(560px, 90vw);
+  }
+
+
+  /* --------------------------------------------------------
+     Programs
+     -------------------------------------------------------- */
 
   .cards {
     margin-top: 4vh;
@@ -952,17 +957,25 @@ body {
     align-content: center;
   }
 
-  /* Metrics */
+
+  /* --------------------------------------------------------
+     Metrics
+     -------------------------------------------------------- */
 
   .metric-grid {
     margin-top: 4vh;
   }
 
-  /* Alumni globe */
+
+  /* --------------------------------------------------------
+     Alumni globe
+     -------------------------------------------------------- */
 
   .globe-panel {
     grid-template-columns: 1fr;
+
     align-content: center;
+
     gap: 1rem;
   }
 
@@ -981,7 +994,9 @@ body {
 
   .globe-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+
     gap: 1rem;
+
     margin-top: 1.5rem;
     max-width: 360px;
   }
@@ -998,19 +1013,36 @@ body {
     min-height: 310px;
   }
 
-  /* Research */
 
-  .columns {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  /* Careers */
+  /* --------------------------------------------------------
+     Professional experience
+     -------------------------------------------------------- */
 
   .career-list {
     grid-template-columns: 1fr;
   }
 
-  /* Footer layout */
+  .columns {
+    grid-template-columns: 1fr 1fr;
+  }
+
+
+  /* --------------------------------------------------------
+     Professional credentials
+     -------------------------------------------------------- */
+
+  .city {
+    background: var(--actuarial-green);
+  }
+
+  .city-box {
+    padding: 4vh 0;
+  }
+
+
+  /* --------------------------------------------------------
+     Final page / contact
+     -------------------------------------------------------- */
 
   .footer {
     grid-template-columns: 1fr;
@@ -1036,7 +1068,14 @@ body {
     min-height: 40vh;
   }
 
-  /* Scroll snapping */
+  .footer-image img {
+    object-position: right center;
+  }
+
+
+  /* --------------------------------------------------------
+     Scroll snapping
+     -------------------------------------------------------- */
 
   .snap {
     scroll-snap-type: y proximity;
@@ -1049,6 +1088,14 @@ body {
    ========================================================== */
 
 @media (max-width: 520px) {
+
+  .cover-title {
+    font-size: clamp(2.5rem, 12vw, 4rem);
+  }
+
+  .cover-subtitle {
+    font-size: 1rem;
+  }
 
   .globe-stats {
     gap: 0.6rem;
@@ -1096,11 +1143,11 @@ body {
   }
 
   .nav-toggle {
-    display: none;
+    display: none !important;
   }
 
   .nav nav.nav-menu {
-    display: flex;
+    display: flex !important;
 
     position: static;
 
