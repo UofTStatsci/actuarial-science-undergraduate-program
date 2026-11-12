@@ -2,12 +2,15 @@
 /* ==========================================================
    UNIVERSITY OF TORONTO
    DEPARTMENT OF STATISTICAL SCIENCES
-   UNDERGRADUATE DIGITAL BROCHURE
+   ACTUARIAL SCIENCE UNDERGRADUATE DIGITAL BROCHURE
 
    File: assets/css/main.css
-   Version: 2.1
+   Version: 2.2
 
    Updates:
+   - Restored original Actuarial Science green
+   - Theme colour: #72c094
+   - Green accents throughout
    - Dynamic mobile viewport sizing
    - Android navigation safe-area support
    - Improved mobile cover spacing
@@ -23,7 +26,7 @@
    ========================================================== */
 
 :root {
-  --blue: #0180a5;
+  --green: #72c094;
   --navy: #08264b;
   --black: #050505;
   --white: #ffffff;
@@ -181,7 +184,7 @@ img {
    ========================================================== */
 
 .cover {
-  background: var(--blue);
+  background: var(--green);
 
   display: flex;
   flex-direction: column;
@@ -266,7 +269,7 @@ img {
 
 
 /* ----------------------------------------------------------
-   Undergraduate Programs subtitle
+   Actuarial Science subtitle
    ---------------------------------------------------------- */
 
 .cover-bottom {
@@ -376,7 +379,7 @@ img {
 
 .cards b {
   font-size: 3rem;
-  color: var(--blue);
+  color: var(--green);
 }
 
 .cards h3 {
@@ -418,7 +421,7 @@ img {
 }
 
 .program.alt {
-  background: var(--blue);
+  background: var(--green);
   color: #fff;
 }
 
@@ -472,7 +475,7 @@ img {
 
 .metric-grid strong {
   display: block;
-  color: var(--blue);
+  color: var(--green);
 
   font-size: clamp(2.5rem, 5vw, 5rem);
   letter-spacing: -0.05em;
@@ -649,7 +652,7 @@ img {
 }
 
 .columns h3 {
-  color: var(--blue);
+  color: var(--green);
 }
 
 .columns p {
@@ -665,7 +668,7 @@ img {
   background:
     linear-gradient(
       120deg,
-      #0180a5 0 55%,
+      var(--green) 0 55%,
       #050505 55%
     );
 
@@ -688,7 +691,7 @@ img {
    ========================================================== */
 
 .apply {
-  background: var(--blue);
+  background: var(--green);
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -734,7 +737,7 @@ img {
 
 .button:hover {
   background: #fff;
-  color: var(--blue);
+  color: var(--green);
   opacity: 1;
 }
 
@@ -906,9 +909,6 @@ img {
 
   /* --------------------------------------------------------
      Mobile headline
-
-     Scale with viewport width and height so the
-     headline doesn't push the subtitle below the screen.
      -------------------------------------------------------- */
 
   .cover h1 {
@@ -929,8 +929,6 @@ img {
 
   /* --------------------------------------------------------
      Mobile subtitle
-
-     Reserve space on the right for the scroll arrow.
      -------------------------------------------------------- */
 
   .cover-bottom {
@@ -964,8 +962,6 @@ img {
 
   /* --------------------------------------------------------
      Scroll arrow
-
-     Position above the navigation ribbon.
      -------------------------------------------------------- */
 
   .cover .down {
@@ -982,9 +978,6 @@ img {
 
   /* --------------------------------------------------------
      Full-page scrolling
-
-     Avoid snapping problems on mobile browsers when
-     their address and navigation bars expand or collapse.
      -------------------------------------------------------- */
 
   .snap {
